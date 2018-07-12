@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 // Database connection 
 const { Pool } = require('pg');
-const connectionString = process.env.DATABASE_URL || "postgres://klentonstone:password@localhost:5432";
+const connectionString = process.env.DATABASE_URL; //|| "postgres://klentonstone:password@localhost:5432/";
 const pool  = new Pool({connectionString: connectionString});
 
 express()
@@ -43,6 +43,7 @@ function handleStream(req, res) {
 
 
 function getStreamFromDB(stream, callback) {
+	console.log("here");
 	pool.query('SELECT * FROM stream WHERE name = $1::text', [stream], function(err, res) {
 		if (err) {
 			throw err;
@@ -55,7 +56,7 @@ function getStreamFromDB(stream, callback) {
 				list: res.rows
 			};
 
-			callback(null, result);
+			callback(null, results);
 		}
 	})
 }

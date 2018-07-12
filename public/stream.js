@@ -21,6 +21,7 @@ function streamSearch() {
         }
     };
 
+    console.log("here at streamName");
     // TODO: I need to get the book name from the form here...
     var streamName = document.getElementById("stream").value;
 
