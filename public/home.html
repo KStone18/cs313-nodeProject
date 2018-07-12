@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="stylesheets/newMain.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="stream.js"></script>
+</head>
+<body>
+	
+	<form class="dataForm" method="get">
+		<div class="containerSign">
+			<h1>Fish Observatory</h1>
+			<hr>
+
+			<div class="form-group">
+				<input type="text" id="stream" placeholder="Stream Name">	
+			</div>
+
+			<div class="clearfix"> 
+        		<button type="button" onclick="streamSearch()" class="btn btn-primary btn-md signupbtn">Search</button>  
+      		</div>
+		</div>
+	</form>
+
+	<div class="containerResult" >
+  		<h3>Results from Database</h3>
+  	</div>
+
+</body>
+</html>
