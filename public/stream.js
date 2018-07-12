@@ -34,7 +34,7 @@ function updatePage(results) {
   var result = JSON.parse(results);
 
 
-  console.log(result["list"]);
+  console.log(result["list"][0]["name"]);
 
   //var div = getElementById("results");
   //div.innerHTML = result["lists"];
