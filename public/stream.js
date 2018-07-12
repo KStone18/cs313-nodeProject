@@ -31,4 +31,7 @@ function streamSearch() {
 
 function updatePage(results) {
   console.log("Updating the div with these results: " + results);
+  var div = getElementById("results");
+  div.innerHTML = result["lists"];
+
 }
