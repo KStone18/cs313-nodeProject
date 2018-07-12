@@ -6,6 +6,7 @@ function streamSearch() {
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
+          console.log(xmlhttp.status);
            if (xmlhttp.status == 200) {
                //document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
                //console.log("Back from the server with: " + xmlhttp.responseText);
