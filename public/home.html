@@ -4,19 +4,23 @@
 	<title>Home</title>
 	<link rel="stylesheet" href="stylesheets/newMain.css" type="text/css" charset="utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="stream.js"></script>
 </head>
-<body>
+<body onload="loadData()">
 	
 	<form class="dataForm" method="get">
 		<div class="containerSign">
 			<h1>Fish Observatory</h1>
 			<hr>
 
-			<div class="form-group">
-				<input type="text" id="stream" name="stream"placeholder="Stream Name">	
+			<div>
+				<select class="form-control" name="stream" id="selectStream">
+					<option disabled selected value> -- Select Stream -- </option>
+					
+				</select>
 			</div>
 
 			<div class="clearfix"> 
@@ -25,8 +29,31 @@
 		</div>
 	</form>
 
-	<div class="containerResult" id="results" >
-  		<h3>Results from Database</h3>
+	<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+        	<div id="ele"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+	<div class="containerResult">
+  		<h3 class="h3results">Results from Database</h3>
+  		<div class="results" id="results">
+  		</div>
   	</div>
 
 </body>

@@ -86,7 +86,7 @@ button:hover {
     opacity:1;
 }
 .dataForm {
-	border:1px solid #ccc;
+	border:3px solid #ccc;
 }
 .pForm {
 	margin: 50px;
@@ -117,8 +117,12 @@ button:hover {
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
   float: left;
-
+  margin-top: 10px;
   width: 40%;
+}
+
+.detailsbtn {
+    width: 8%;
 }
 
 /* Add padding to container elements */
@@ -129,10 +133,23 @@ button:hover {
     width: 500px;
 }
 
+.h3results {
+    margin: auto;
+    margin-top: 10px;
+    padding: 16px;
+    width: 500px;
+}
+
 .containerResult {
 	margin: auto;
 	margin-top: 10px;
+    /*padding: 16px;*/
     width: 700px;
+}
+
+.results {
+    display: flex;justify-content: space-around;
+    vertical-align: center;
 }
 
 /* Clear floats */
