@@ -70,6 +70,7 @@ function handleStream(req, res) {
 
 function getStreamInfo(stream, callback) {
 	console.log("Getting information for stream...");
+	
 	pool.query('SELECT s.name as stream_name, si.name as site_name, si.description, si.latitude, si.longitude, j.name, j.date, j.content FROM stream s INNER JOIN site si ON si.stream_id = s.id INNER JOIN journal j ON j.site_id = si.id WHERE s.name = $1::text', [stream], function(err, res) {
 		if (err) {
 			throw err;
