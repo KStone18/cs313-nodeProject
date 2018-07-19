@@ -35,7 +35,7 @@ function updatePage(results) {
   console.log("Updating the div with these results: " + results);
   var result = JSON.parse(results);
   var div = document.getElementById("results"); 
-  div.innerHTML = result["list"][0]["name"] + "<button type='button' class='details btn btn-primary btn-xs detailsbtn' id='" + result["list"][0]["id"] +  "' data-toggle='modal' data-target='#myModal'>Details</button>"; //"<button data-toggle='popover' class='details btn btn-primary btn-xs detailsbtn' id='" + result["list"][0]["id"] + "' onclick()=\"showDetails()\">Details</button>";
+  div.innerHTML = result["list"][0]["name"] + "<button type='button' class='details btn btn-primary btn-xs detailsbtn' id='" + result["list"][0]["id"] +  "' data-toggle='modal' data-target='#addModal'>Details</button>" + "<button type='button' class='add  btn btn-info btn-xs detailsbtn'  data-toggle='modal' data-target='#myModal'><span class='glyphicon glyphicon-plus'></span> Plus</button>";  //"<button data-toggle='popover' class='details btn btn-primary btn-xs detailsbtn' id='" + result["list"][0]["id"] + "' onclick()=\"showDetails()\">Details</button>";
 
   //console.log(result["list"][0]["name"]);
 

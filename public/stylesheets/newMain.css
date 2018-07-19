@@ -148,7 +148,8 @@ button:hover {
 }
 
 .results {
-    display: flex;justify-content: space-around;
+
+    display: flex; flex;justify-content: space-around;
     vertical-align: center;
 }
 
