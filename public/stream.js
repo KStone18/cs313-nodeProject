@@ -56,6 +56,7 @@ $(document).on('click', ".details", function(){
               console.log(typeof result);
               var resultStr = "";
               var arrayObj = result["list"];
+              console.log("here");
               console.log(result[list][0]["site_name"]);
               /*
               for (i in arrayObj){
